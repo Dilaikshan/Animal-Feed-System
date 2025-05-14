@@ -71,8 +71,12 @@ The **Animal Feed System** features a virtual pet with three interactive control
 6. Enjoy your interactive IoT pet game!
 
 ## 📸 Screenshots
+ ![alt text](screenshots/initialState.png)
+![alt text](screenshots/whenEneregyBtnClicked.png)
+![alt text](screenshots/whenFeedBtnClicked.png)
+![alt text](screenshots/whenHappinessReachedMaximum.png)
 
-*Add screenshots of your Blynk app and hardware setup here.*
+
 
 ## 📜 License
 
