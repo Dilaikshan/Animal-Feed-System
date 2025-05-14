@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "AJ Smart Way",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 9.6, "left": 110.44, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -195.2,
+      "left": 24.8,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 94, "left": 259.2, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 98.4,
+      "left": -94.2,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "lcd1:SCL", "esp:22", "green", [ "h-19.2", "v134.7", "h220.8", "v57.6" ] ],
+    [ "lcd1:SDA", "esp:21", "green", [ "h-38.4", "v19.4" ] ],
+    [ "lcd1:VCC", "esp:VN", "red", [ "h-57.6", "v220.9" ] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [ "h-48", "v153.6", "h259.2", "v48" ] ],
+    [ "bz1:2", "esp:26", "green", [ "h47.6", "v-57.6" ] ],
+    [ "servo1:GND", "esp:GND.2", "black", [ "h0", "v-96" ] ],
+    [ "servo1:PWM", "esp:5", "green", [ "h-28.8", "v-28.6" ] ],
+    [ "servo1:V+", "esp:5V", "green", [ "h-19.2", "v86.5", "h-163.2", "v-19.2" ] ],
+    [ "esp:GND.1", "bz1:1", "black", [ "h-28.65", "v38.4", "h-153.6", "v0" ] ]
+  ],
+  "dependencies": {}
+}
